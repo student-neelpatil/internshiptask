@@ -1,0 +1,159 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+  }
+  
+  
+  .stopwatch-container {
+    text-align: center;
+    padding: 20px;
+    
+    background-color: #94bbe9;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    border: 3px solid #333;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  
+  .display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border: 3px solid #007bff;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e7f3ff, #c2dbff);
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .display:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+  }
+  
+  
+  button{
+    flex: 1;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid #333;
+    border-radius: 10px;
+    cursor: pointer;
+   
+  }
+  #start{
+
+    color: white;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  #start:hover{
+    background: linear-gradient(135deg, #0056b3, #003c8f);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  
+  
+  #start:disabled {
+    background: linear-gradient(135deg, #0056b3, #003c8f);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  #reset{
+    color: white;
+    background: rgba(2, 107, 11, 1.0);
+    background: linear-gradient(135deg, rgba(2, 107, 11, 1.0), rgba(62, 249, 224, 1.0));
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+
+  }
+  #reset:hover{
+     background: rgba(1, 45, 5, 1.0);
+    background: linear-gradient(135deg, rgba(1, 45, 5, 1.0), rgba(62, 249, 224, 1.0));
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  #reset:disabled{
+    background: rgba(2, 107, 11, 1.0);
+    background: linear-gradient(135deg, rgba(2, 107, 11, 1.0), rgba(62, 249, 224, 1.0));
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  #stop{
+    color: white;
+   background: rgba(150, 53, 19, 1.0);
+   background: linear-gradient(135deg, rgba(150, 53, 19, 1.0), rgba(221, 48, 68, 1.0));
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   transition: all 0.3s ease-in-out;
+  }
+
+#stop:hover{
+   background: rgba(81, 25, 6, 1.0);
+   background: linear-gradient(135deg, rgba(81, 25, 6, 1.0), rgba(221, 48, 68, 1.0));
+   transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#stop:disabled{
+   background: rgba(81, 25, 6, 1.0);
+   background: linear-gradient(135deg, rgba(81, 25, 6, 1.0), rgba(221, 48, 68, 1.0));
+   cursor: not-allowed;
+   box-shadow: none;
+}
+
+  
+  @media (max-width: 768px) {
+    .stopwatch-container {
+      padding: 15px;
+    }
+  
+    .display {
+      font-size: 2rem;
+      padding: 15px 0;
+    }
+  
+    button {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
